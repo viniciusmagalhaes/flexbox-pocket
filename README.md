@@ -1,15 +1,30 @@
 # Flexbox Pocket Guide
 
 ##### References:
-- W3: https://www.w3.org/TR/css-flexbox/
-- A Complete Guide to Flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- [W3] (https://www.w3.org/TR/css-flexbox/)
+- [A Complete Guide to Flexbox] (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### Guides:
 - X: main axis
 - Y: cross axis
 
+### Summary of Flexbox Properties
+
+- flex-direction
+- flex-wrap
+- flex-flow
+- justify-content
+- align-items
+- align-content
+- order
+- align-self
+- flex-grow
+- flex-shrink
+- flex-basis
+- flex
+
 ## Properties for container (Flex container)
-```css
+```scss
 
 .flex-container {
 
@@ -72,7 +87,7 @@
 
 ## Properties for item (Flex items)
 
-```css
+```scss
 
 .flex-item {
 
@@ -120,3 +135,24 @@
 ```
 
 > Note that float, clear and vertical-align have no effect on a flex item.
+
+
+## Aligning with auto margins
+
+One use of auto margins in the main axis is to separate flex items into distinct "groups".
+
+```scss
+
+.menu-flex {
+  display: flex;
+
+  &__item {
+    padding: 1em;
+
+    &--modifier {
+      margin-left: auto; // Can set top, right, bottom
+    }
+  }
+}
+
+```
